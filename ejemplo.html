@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="encabezado">
+      <h1>Formulario para contactarse con la IA</h1>
+    </div>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div>
+        <div class="body">
+          <textarea name="prompt" id="prompt">Escribe algo...</textarea>
+          <button type="submit">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

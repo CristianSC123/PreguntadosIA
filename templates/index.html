@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario IA</title>
+  </head>
+  <body>
+    <div class="encabezado">
+      <h1>Formulario para contactarse con la IA</h1>
+    </div>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div>
+        <div class="body">
+          <textarea name="prompt" id="prompt" placeholder="Escribe algo aquí..."></textarea>
+          <button type="submit">Enviar</button>
+        </div>
+      </div>
+      {% if response %}
+        <div class="response">
+          <h2>Respuesta de la IA:</h2>
+          <p>{{ response }}</p>
+        </div>
+      {% endif %}
+    </form>
+  </body>
+</html>
